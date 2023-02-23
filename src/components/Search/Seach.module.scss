@@ -1,0 +1,74 @@
+.root {
+  position: relative;
+  left: -120px;
+  @media (max-width: 1200px) {
+      margin-left: 15%;
+  }
+}
+.input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  padding-left: 42px;
+  font-size: 16px;
+  width: 400px;
+  border-radius: 10px;
+  transition: all 0.15s ease-in-out;
+
+  @media (max-width: 1380px) {
+    margin-left: 120px;
+  }  
+  @media (max-width: 1060px) {
+      width: 200px;
+      margin-left: 150px;
+  }
+  @media (max-width: 800px) {
+    width: 200px;
+    margin-left: 180px;
+    @media (max-width: 645px) {
+      margin-top: 30px;
+      margin-left: 50%;
+    }
+
+}
+
+}
+.icon{
+  width: 22px;
+  height: 22px;
+  opacity: 0.23;
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  @media (max-width: 1380px) {
+    margin-left: 120px;
+  }
+    @media (max-width: 1060px) {
+      margin-left: 150px;
+    }
+    @media (max-width: 800px) {
+      margin-left: 180px;
+    }
+    @media (max-width: 645px) {
+      margin-top: 30px;
+      margin-left: 50%;
+    }
+
+}
+.close {
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  @media (max-width: 645px) {
+    right: -85px;
+    top: 45px;
+  
+  }
+}
