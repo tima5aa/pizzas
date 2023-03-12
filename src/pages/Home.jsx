@@ -15,7 +15,6 @@ const Home = () => {
   const sortType =  sort.sortProperty;
 
   const { searchValue } = React.useContext(SearchContext);
-  //const для загрузки пицц из бєка
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -25,7 +24,6 @@ const Home = () => {
     dispatch(setCategoryId(index));
   }
 
-// хук для  сообщения React, что ваш компонент должен что-то сделать после рендеринга
   React.useEffect(() => {
     setIsLoading(true);
 
@@ -33,17 +31,8 @@ const Home = () => {
     const sortBy = sortType.replace('-','');
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const search = searchValue ? `&search=${searchValue}` : '';
-  //пример написания запроса на бэк с помощью fetch
-//   fetch(
-// `https://63e219cdad0093bf29c7b7ab.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
-// )
-//   .then((res) => res.json())
-//   .then((arr) => {
-//   setItems(arr);
-//   setIsLoading(false);
-// });
 
-    axios
+          axios
         .get(
           `https://63e219cdad0093bf29c7b7ab.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`
           )
